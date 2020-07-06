@@ -130,7 +130,7 @@ public class WeatherTestCases extends Base implements Comparator<Integer>{
     	js = getJsonPath(finalResponse);
     	double temp = js.getDouble("main.temp");
     	System.out.println(temp);
-    	double deg = temp-273.15;
+    	double deg = temp-273.15; //Converting Kelvin to Celsius
     	long val = Math.round(deg);
     	finalTemp = (int) val;
     	System.out.println(finalTemp);
