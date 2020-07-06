@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="testCases.Listeners"/>
+  </listeners>
+  <test thread-count="5" verbose="0" name="WeatherReport(failed)">
+    <classes>
+      <class name="testCases.WeatherTestCases">
+        <methods>
+          <include name="user_verifies_that_the_city_is_available_on_the_map_and_clicks_on_it_to_display_the_weather_details" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- testCases.WeatherTestCases -->
+    </classes>
+  </test> <!-- WeatherReport(failed) -->
+</suite> <!-- Failed suite [Suite] -->
