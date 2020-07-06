@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Comparator;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -21,6 +23,7 @@ import resources.Base;
 
 public class WeatherTestCases extends Base implements Comparator<Integer>{
 
+	public static Logger log = LogManager.getLogger(Base.class.getName());
 	LandingPage lp;
 	WeatherPage wp;
 	JsonPath js;
@@ -35,6 +38,7 @@ public class WeatherTestCases extends Base implements Comparator<Integer>{
 	public void initialize_the_chrome_browser() throws IOException
 	{
 		 driver=invokeBrowser();
+		 log.info("Chrome Browser is initialized successfully");
 	}
 	
 	@Test(priority=2)
@@ -42,6 +46,7 @@ public class WeatherTestCases extends Base implements Comparator<Integer>{
 		
 		driver.get(prop.getProperty("url"));
 		Assert.assertEquals(driver.getTitle(), prop.getProperty("title"));
+		log.info("User should navigate to the NDTV home page");
 	}
 	
 	@Test(priority=3)
@@ -49,6 +54,7 @@ public class WeatherTestCases extends Base implements Comparator<Integer>{
 
 		lp = new LandingPage(driver);
 		Assert.assertTrue(lp.getLogo().isDisplayed());
+		log.info("User should be able to validate whether the NDTV logo is displayed successfully or not");
 	}
 	
 	@Test(priority=4)
@@ -57,6 +63,7 @@ public class WeatherTestCases extends Base implements Comparator<Integer>{
     	wp = new WeatherPage(driver);
     	wp.clickMenu().click();
     	wp.getlinkList();
+    	log.info("User should be able to click on the weather link");
     	
     }
     
@@ -64,6 +71,7 @@ public class WeatherTestCases extends Base implements Comparator<Integer>{
     public void user_enters_the_cityname_and_checks_if_it_is_displayed_and_selected(String city) throws Throwable {
         
     	wp.getCityList(city);
+    	log.info("User should be able to enter city name and checks if it is displayed and selected");
     }
     
 	@Test(priority=6, dataProvider="getCity")
@@ -71,6 +79,7 @@ public class WeatherTestCases extends Base implements Comparator<Integer>{
         
     	wp.getCityNameMap(city);
     	Assert.assertTrue(wp.dispayWeatherDetails().isDisplayed());
+    	log.info("User should verify that the city is available on the map and clicks on it to display the weather details");
     }
 	
 	@Test(priority=7)
@@ -80,12 +89,14 @@ public class WeatherTestCases extends Base implements Comparator<Integer>{
 		String temperature = newText[1].trim();
 		Temperature = Integer.parseInt(temperature);
 		System.out.println(Temperature);
+		log.info("User should save the temperature in degrees");
     }
     
 	@Test(priority=8)
     public void user_closes_the_browser() throws Throwable {
         
 		driver.quit();
+		log.info("User should close the browser");
     }
     
 	@Test(priority=9, dataProvider="getCityAppID")
@@ -95,6 +106,7 @@ public class WeatherTestCases extends Base implements Comparator<Integer>{
 		
 		 request = given().queryParam("q", city).queryParam("appid", appid);
 		 request.log().all();
+		 log.info("User should pass the cityname and appid to the request uri");
 	}
     
 	@Test(priority=10, dataProvider="getResourceMethod")
@@ -115,12 +127,15 @@ public class WeatherTestCases extends Base implements Comparator<Integer>{
 		else if (httpMethod.equalsIgnoreCase("DELETE"))
 			givenResponse = request.when().delete(ResourceAPI).then()
 			.extract().response();
+    	
+    	log.info("User should call resource with required HTTP request");
 	}
     
 	@Test(priority=11)
     public void the_api_call_should_be_successfull_and_the_status_code_should_be_200() throws Throwable {
         
     	Assert.assertEquals(givenResponse.getStatusCode(),200);
+    	log.info("The api call should be successful and status code should be 200");
     }
 	
 	@Test(priority=12)
@@ -134,6 +149,7 @@ public class WeatherTestCases extends Base implements Comparator<Integer>{
     	long val = Math.round(deg);
     	finalTemp = (int) val;
     	System.out.println(finalTemp);
+    	log.info("User should save the temperature in degree celsius from the API response");
     }
 	
 	@Override
@@ -164,7 +180,7 @@ public class WeatherTestCases extends Base implements Comparator<Integer>{
 		Comparator<Integer> com = new WeatherTestCases();
 		com.compare(Temperature, finalTemp);
 
-		
+		log.info("Comaprison should be successful");
 	}
     
 	@DataProvider

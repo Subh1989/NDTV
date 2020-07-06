@@ -1,0 +1,3 @@
+20:12:56.977 [main] INFO  resources.Base - The api call should be successful and status code should be 200
+20:12:58.685 [main] INFO  resources.Base - User should save the temperature in degree celsius from the API response
+20:12:58.689 [main] INFO  resources.Base - Comaprison should be successful

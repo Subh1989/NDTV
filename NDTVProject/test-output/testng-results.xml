@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="0" ignored="0" total="13" passed="13">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="17540" started-at="2020-07-06T13:17:07Z" finished-at="2020-07-06T13:17:24Z">
+  <suite name="Suite" duration-ms="44213" started-at="2020-07-06T14:42:14Z" finished-at="2020-07-06T14:42:58Z">
     <groups>
     </groups>
-    <test name="WeatherReport" duration-ms="17540" started-at="2020-07-06T13:17:07Z" finished-at="2020-07-06T13:17:24Z">
+    <test name="WeatherReport" duration-ms="44213" started-at="2020-07-06T14:42:14Z" finished-at="2020-07-06T14:42:58Z">
       <class name="testCases.WeatherTestCases">
-        <test-method status="PASS" signature="initialize_the_chrome_browser()[pri:1, instance:testCases.WeatherTestCases@1e4a7dd4]" name="initialize_the_chrome_browser" duration-ms="5997" started-at="2020-07-06T13:17:07Z" finished-at="2020-07-06T13:17:13Z">
+        <test-method status="PASS" signature="initialize_the_chrome_browser()[pri:1, instance:testCases.WeatherTestCases@18d87d80]" name="initialize_the_chrome_browser" duration-ms="18886" started-at="2020-07-06T14:42:14Z" finished-at="2020-07-06T14:42:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize_the_chrome_browser -->
-        <test-method status="PASS" signature="user_navigates_to_the_NDTV_home_page()[pri:2, instance:testCases.WeatherTestCases@1e4a7dd4]" name="user_navigates_to_the_NDTV_home_page" duration-ms="3496" started-at="2020-07-06T13:17:13Z" finished-at="2020-07-06T13:17:16Z">
+        <test-method status="PASS" signature="user_navigates_to_the_NDTV_home_page()[pri:2, instance:testCases.WeatherTestCases@18d87d80]" name="user_navigates_to_the_NDTV_home_page" duration-ms="7284" started-at="2020-07-06T14:42:33Z" finished-at="2020-07-06T14:42:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- user_navigates_to_the_NDTV_home_page -->
-        <test-method status="PASS" signature="user_should_be_able_to_validate_whether_the_NDTV_logo_is_displaying_or_not()[pri:3, instance:testCases.WeatherTestCases@1e4a7dd4]" name="user_should_be_able_to_validate_whether_the_NDTV_logo_is_displaying_or_not" duration-ms="219" started-at="2020-07-06T13:17:16Z" finished-at="2020-07-06T13:17:17Z">
+        <test-method status="PASS" signature="user_should_be_able_to_validate_whether_the_NDTV_logo_is_displaying_or_not()[pri:3, instance:testCases.WeatherTestCases@18d87d80]" name="user_should_be_able_to_validate_whether_the_NDTV_logo_is_displaying_or_not" duration-ms="1360" started-at="2020-07-06T14:42:40Z" finished-at="2020-07-06T14:42:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- user_should_be_able_to_validate_whether_the_NDTV_logo_is_displaying_or_not -->
-        <test-method status="PASS" signature="user_should_be_able_to_click_on_the_weather_link()[pri:4, instance:testCases.WeatherTestCases@1e4a7dd4]" name="user_should_be_able_to_click_on_the_weather_link" duration-ms="3524" started-at="2020-07-06T13:17:17Z" finished-at="2020-07-06T13:17:20Z">
+        <test-method status="PASS" signature="user_should_be_able_to_click_on_the_weather_link()[pri:4, instance:testCases.WeatherTestCases@18d87d80]" name="user_should_be_able_to_click_on_the_weather_link" duration-ms="6460" started-at="2020-07-06T14:42:42Z" finished-at="2020-07-06T14:42:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- user_should_be_able_to_click_on_the_weather_link -->
-        <test-method status="PASS" signature="user_enters_the_and_checks_if_it_is_displayed_and_selected(java.lang.String)[pri:5, instance:testCases.WeatherTestCases@1e4a7dd4]" name="user_enters_the_and_checks_if_it_is_displayed_and_selected" duration-ms="1177" started-at="2020-07-06T13:17:20Z" data-provider="getCity" finished-at="2020-07-06T13:17:21Z">
+        <test-method status="PASS" signature="user_enters_the_cityname_and_checks_if_it_is_displayed_and_selected(java.lang.String)[pri:5, instance:testCases.WeatherTestCases@18d87d80]" name="user_enters_the_cityname_and_checks_if_it_is_displayed_and_selected" duration-ms="2470" started-at="2020-07-06T14:42:48Z" data-provider="getCity" finished-at="2020-07-06T14:42:51Z">
           <params>
             <param index="0">
               <value>
@@ -33,8 +33,8 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- user_enters_the_and_checks_if_it_is_displayed_and_selected -->
-        <test-method status="PASS" signature="user_verifies_that_the_city_is_available_on_the_map_and_clicks_on_it_to_display_the_weather_details(java.lang.String)[pri:6, instance:testCases.WeatherTestCases@1e4a7dd4]" name="user_verifies_that_the_city_is_available_on_the_map_and_clicks_on_it_to_display_the_weather_details" duration-ms="184" started-at="2020-07-06T13:17:21Z" data-provider="getCity" finished-at="2020-07-06T13:17:21Z">
+        </test-method> <!-- user_enters_the_cityname_and_checks_if_it_is_displayed_and_selected -->
+        <test-method status="PASS" signature="user_verifies_that_the_city_is_available_on_the_map_and_clicks_on_it_to_display_the_weather_details(java.lang.String)[pri:6, instance:testCases.WeatherTestCases@18d87d80]" name="user_verifies_that_the_city_is_available_on_the_map_and_clicks_on_it_to_display_the_weather_details" duration-ms="433" started-at="2020-07-06T14:42:51Z" data-provider="getCity" finished-at="2020-07-06T14:42:51Z">
           <params>
             <param index="0">
               <value>
@@ -45,15 +45,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- user_verifies_that_the_city_is_available_on_the_map_and_clicks_on_it_to_display_the_weather_details -->
-        <test-method status="PASS" signature="user_saves_the_temperature_in_degrees()[pri:7, instance:testCases.WeatherTestCases@1e4a7dd4]" name="user_saves_the_temperature_in_degrees" duration-ms="32" started-at="2020-07-06T13:17:21Z" finished-at="2020-07-06T13:17:22Z">
+        <test-method status="PASS" signature="user_saves_the_temperature_in_degrees()[pri:7, instance:testCases.WeatherTestCases@18d87d80]" name="user_saves_the_temperature_in_degrees" duration-ms="65" started-at="2020-07-06T14:42:51Z" finished-at="2020-07-06T14:42:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- user_saves_the_temperature_in_degrees -->
-        <test-method status="PASS" signature="user_closes_the_browser()[pri:8, instance:testCases.WeatherTestCases@1e4a7dd4]" name="user_closes_the_browser" duration-ms="1055" started-at="2020-07-06T13:17:22Z" finished-at="2020-07-06T13:17:23Z">
+        <test-method status="PASS" signature="user_closes_the_browser()[pri:8, instance:testCases.WeatherTestCases@18d87d80]" name="user_closes_the_browser" duration-ms="987" started-at="2020-07-06T14:42:51Z" finished-at="2020-07-06T14:42:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- user_closes_the_browser -->
-        <test-method status="PASS" signature="user_passes_cityname_and_appid_to_the_request_uri(java.lang.String, java.lang.String)[pri:9, instance:testCases.WeatherTestCases@1e4a7dd4]" name="user_passes_cityname_and_appid_to_the_request_uri" duration-ms="500" started-at="2020-07-06T13:17:23Z" data-provider="getCityAppID" finished-at="2020-07-06T13:17:23Z">
+        <test-method status="PASS" signature="user_passes_cityname_and_appid_to_the_request_uri(java.lang.String, java.lang.String)[pri:9, instance:testCases.WeatherTestCases@18d87d80]" name="user_passes_cityname_and_appid_to_the_request_uri" duration-ms="1414" started-at="2020-07-06T14:42:52Z" data-provider="getCityAppID" finished-at="2020-07-06T14:42:53Z">
           <params>
             <param index="0">
               <value>
@@ -69,7 +69,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- user_passes_cityname_and_appid_to_the_request_uri -->
-        <test-method status="PASS" signature="user_calls_something_with_something_http_request(java.lang.String, java.lang.String)[pri:10, instance:testCases.WeatherTestCases@1e4a7dd4]" name="user_calls_something_with_something_http_request" duration-ms="668" started-at="2020-07-06T13:17:23Z" data-provider="getResourceMethod" finished-at="2020-07-06T13:17:24Z">
+        <test-method status="PASS" signature="user_calls_Resource_with_Required_http_request(java.lang.String, java.lang.String)[pri:10, instance:testCases.WeatherTestCases@18d87d80]" name="user_calls_Resource_with_Required_http_request" duration-ms="3039" started-at="2020-07-06T14:42:53Z" data-provider="getResourceMethod" finished-at="2020-07-06T14:42:56Z">
           <params>
             <param index="0">
               <value>
@@ -84,16 +84,16 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- user_calls_something_with_something_http_request -->
-        <test-method status="PASS" signature="the_api_call_should_be_successfull_and_the_status_code_should_be_200()[pri:11, instance:testCases.WeatherTestCases@1e4a7dd4]" name="the_api_call_should_be_successfull_and_the_status_code_should_be_200" duration-ms="0" started-at="2020-07-06T13:17:24Z" finished-at="2020-07-06T13:17:24Z">
+        </test-method> <!-- user_calls_Resource_with_Required_http_request -->
+        <test-method status="PASS" signature="the_api_call_should_be_successfull_and_the_status_code_should_be_200()[pri:11, instance:testCases.WeatherTestCases@18d87d80]" name="the_api_call_should_be_successfull_and_the_status_code_should_be_200" duration-ms="8" started-at="2020-07-06T14:42:56Z" finished-at="2020-07-06T14:42:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- the_api_call_should_be_successfull_and_the_status_code_should_be_200 -->
-        <test-method status="PASS" signature="user_saves_the_temperature_in_degrees_celsius()[pri:12, instance:testCases.WeatherTestCases@1e4a7dd4]" name="user_saves_the_temperature_in_degrees_celsius" duration-ms="642" started-at="2020-07-06T13:17:24Z" finished-at="2020-07-06T13:17:24Z">
+        <test-method status="PASS" signature="user_saves_the_temperature_in_degrees_celsius()[pri:12, instance:testCases.WeatherTestCases@18d87d80]" name="user_saves_the_temperature_in_degrees_celsius" duration-ms="1699" started-at="2020-07-06T14:42:56Z" finished-at="2020-07-06T14:42:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- user_saves_the_temperature_in_degrees_celsius -->
-        <test-method status="PASS" signature="CompareTemp()[pri:13, instance:testCases.WeatherTestCases@1e4a7dd4]" name="CompareTemp" duration-ms="0" started-at="2020-07-06T13:17:24Z" finished-at="2020-07-06T13:17:24Z">
+        <test-method status="PASS" signature="CompareTemp()[pri:13, instance:testCases.WeatherTestCases@18d87d80]" name="CompareTemp" duration-ms="2" started-at="2020-07-06T14:42:58Z" finished-at="2020-07-06T14:42:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CompareTemp -->

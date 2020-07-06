@@ -1,0 +1,5 @@
+20:12:51.439 [main] INFO  resources.Base - User should verify that the city is available on the map and clicks on it to display the weather details
+20:12:51.522 [main] INFO  resources.Base - User should save the temperature in degrees
+20:12:52.512 [main] INFO  resources.Base - User should close the browser
+20:12:53.930 [main] INFO  resources.Base - User should pass the cityname and appid to the request uri
+20:12:56.973 [main] INFO  resources.Base - User should call resource with required HTTP request
