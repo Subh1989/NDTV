@@ -26,7 +26,7 @@ public class WeatherTestCases extends Base implements Comparator<Integer>{
 	JsonPath js;
 	Response givenResponse;
 	RequestSpecification request;
-	int tempDetails;
+	int finalTemp;
 	int Temperature;
 	WeatherTestCases wt1;
 	WeatherTestCases wt2;
@@ -61,7 +61,7 @@ public class WeatherTestCases extends Base implements Comparator<Integer>{
     }
     
 	@Test(priority=5, dataProvider="getCity")
-    public void user_enters_the_and_checks_if_it_is_displayed_and_selected(String city) throws Throwable {
+    public void user_enters_the_cityname_and_checks_if_it_is_displayed_and_selected(String city) throws Throwable {
         
     	wp.getCityList(city);
     }
@@ -98,7 +98,7 @@ public class WeatherTestCases extends Base implements Comparator<Integer>{
 	}
     
 	@Test(priority=10, dataProvider="getResourceMethod")
-    public void user_calls_something_with_something_http_request(String strResource, String httpMethod) throws Throwable {
+    public void user_calls_Resource_with_Required_http_request(String strResource, String httpMethod) throws Throwable {
         
     	APIResources ar = APIResources.valueOf(strResource);
     	String ResourceAPI = ar.getResource();	
@@ -128,23 +128,28 @@ public class WeatherTestCases extends Base implements Comparator<Integer>{
     	String finalResponse = givenResponse.asString();
     	System.out.println(finalResponse);
     	js = getJsonPath(finalResponse);
-    	float temp = js.getFloat("main.temp");
+    	double temp = js.getDouble("main.temp");
     	System.out.println(temp);
-    	double degreeCelsius = temp-273.15;
-    	long deg = Math.round(degreeCelsius);
-    	int tempDetails = (int) deg;
-    	System.out.println(tempDetails);
+    	double deg = temp-273.15;
+    	long val = Math.round(deg);
+    	finalTemp = (int) val;
+    	System.out.println(finalTemp);
     }
 	
 	@Override
 	public int compare(Integer arg0, Integer arg1) {
 		
+
 		if(arg0==arg1)
 		{
 			System.out.println("Pass");
 			return 0;
 		}
-		else
+		else if(arg0>arg1)
+		{
+			System.out.println("Pass");
+			return 1;
+		}
 		{
 			System.out.println("Fail");
 			return -1;
@@ -157,7 +162,8 @@ public class WeatherTestCases extends Base implements Comparator<Integer>{
 	{
 
 		Comparator<Integer> com = new WeatherTestCases();
-		com.compare(Temperature, tempDetails);
+		com.compare(Temperature, finalTemp);
+
 		
 	}
     
@@ -166,7 +172,7 @@ public class WeatherTestCases extends Base implements Comparator<Integer>{
 	{
 		//Array is 5 means it starts with 0,1,2,3,4.
 		Object[][] obj = new Object[1][1];
-		obj[0][0] = "Ajme";
+		obj[0][0] = "Kolkata";
 		return obj;
 	}
 	
@@ -175,7 +181,7 @@ public class WeatherTestCases extends Base implements Comparator<Integer>{
 	{
 		//Array is 5 means it starts with 0,1,2,3,4.
 		Object[][] obj = new Object[1][2];
-		obj[0][0] = "Ajmer";
+		obj[0][0] = "Kolkata";
 		obj[0][1] = "7fe67bf08c80ded756e598d6f8fedaea";
 		return obj;
 	}

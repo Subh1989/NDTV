@@ -5,7 +5,7 @@
     <classes>
       <class name="testCases.WeatherTestCases">
         <methods>
-          <include name="CompareTemp"/>
+          <include name="user_saves_the_temperature_in_degrees_celsius"/>
         </methods>
       </class> <!-- testCases.WeatherTestCases -->
     </classes>
